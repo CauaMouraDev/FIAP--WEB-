@@ -1,0 +1,38 @@
+body {
+     background-color: lightgray;
+     margin: 0px;
+     padding: 0px;
+}
+h1{
+     font-family:'Trebucde', 'Lucns', Arial, sans-serif;
+     background-color: lightblue;
+     color:green;
+      text-align: center;
+     padding: 20px;
+     margin:0px;
+     width: 100%;
+    border: 5px solid black;
+}
+p{
+    font-family: 'Trebucde', 'Lucns', Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    margin: 20px 0;
+    text-align:center;
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(23, 112, 164);
+    border: 2px solid #ccc;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    border: 1px solid black;
+}
+
+.present{
+    font-size: 20px;
+    color: #19a1ca;
+}

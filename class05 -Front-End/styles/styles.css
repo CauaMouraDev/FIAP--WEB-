@@ -138,6 +138,11 @@ input:disabled {
     font-weight: bold;
 }
 
+.lista-marker li::marker {
+    color: #dc2626;
+    font-size: 18px;
+}
+
 .texto-selecionado::selection {
     background-color: yellow;
     color: black;

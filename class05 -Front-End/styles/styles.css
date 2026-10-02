@@ -1,0 +1,75 @@
+div:hover{
+    background-color:yellow;
+}
+
+a:active{ /*Active serve para alterar o estilo do elemento quando ele é clicado */
+    color:green;
+    background-color: gray;
+    width: 100px;
+    height: 50px;
+}
+
+a:visited{ /*visited serve para alterar o estilo do elemento quando ele já foi visitado */
+    background-color: blue;
+    width: 100px;
+    height: 50px;
+}
+
+input:focus{ /* -----  Focus serve para alterar o estilo do elemento quando ele está em foco */
+    background-color: greenyellow;
+    width: 100px;
+    height: 50px;
+}
+li:first-child{ /*first-child serve para alterar o estilo do primeiro elemento filho */
+     color: red;
+    
+}
+
+li:last-child{ /*last-child serve para alterar o estilo do último elemento filho */
+    color: blue;
+}
+
+li:nth-child(odd){ /*forma aleatória de pegar itens põem as condições de forma aleatória*/
+    /*even - pega os pares*/ /* odd - pega os ímpares*/ /*nth-child serve para alterar o estilo do elemento filho de acordo com a sua posição */
+    color: green;
+
+}
+
+li:not(.esse){ /*not serve para alterar o estilo do elemento que não possui a classe especificada */
+    color: lightblue;
+} 
+
+:checked{ /*checked serve para alterar o estilo do elemento quando ele está marcado */
+     margin-left: 20px;
+    background-color: red;
+    width: 100px;
+    height: 50px;
+}
+input[type='email']:valid{ /*valid serve para alterar o estilo do elemento quando ele é válido */
+    background-color: green;
+}
+
+input[type='email']:invalid{ /*invalid serve para alterar o estilo do elemento quando ele é inválido */
+    background-color: orange;
+
+    
+}
+
+input[type='email']:required{ /*required serve para alterar o estilo do elemento quando ele é obrigatório */
+    background-color: red;
+
+
+}
+option:checked{ /*checked serve para alterar o estilo do elemento quando ele está marcado */
+    background-color: red;
+    width: 100px;
+    height: 50px;
+
+
+}
+
+
+input:disabled{ /*disabled serve para alterar o estilo do elemento quando ele está desabilitado */
+    background-color: gray;
+
+}

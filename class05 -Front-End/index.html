@@ -1,43 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OLÁ, MUNDO!</title>
-     <link rel="stylesheet" href="styles/styles.css">
+    <title>Aula 05 - Pseudo-classes e Pseudo-elementos</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <h1>OLÁ, MUNDO!</h1>
-    <DIV>lorem ipsum dolor sit amet, c
-        onsectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</DIV>
-    <a href="" alt="Link">Link</a>
+    <h1>Estudo de Pseudo-classes e Pseudo-elementos em CSS</h1>
 
-    <input type="text" placeholder="Digite algo...">
-    <ul>
-        <li>Item 1</li>
-        <li class="esseNaO  ">Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-        <li>Item 6</li>
-        <li>Item 7</li>
-    </ul>
-    <label for="checkbox1">Checkbox 1</label>
-    <input type="checkbox" id="checkbox1">
+    <section class="marker">
+        <h2>Checklist de estudo</h2>
+        <ul>
+            <li>✓ :hover = quando o mouse passa por cima</li>
+            <li>✓ :active = quando clica no elemento</li>
+            <li>✓ :visited = link já acessado</li>
+            <li>✓ :focus = elemento em foco</li>
+            <li>✓ :first-child / :last-child = primeiro e último filho</li>
+            <li>✓ :nth-child(odd) = elementos ímpares</li>
+            <li>✓ :not(.classe) = exceto a classe informada</li>
+            <li>✓ :checked = checkbox marcado</li>
+            <li>✓ :valid / :invalid = e-mail válido ou inválido</li>
+            <li>✓ :required = campo obrigatório</li>
+            <li>✓ :disabled = campo bloqueado</li>
+            <li>✓ ::first-letter = primeira letra</li>
+            <li>✓ ::first-line = primeira linha</li>
+            <li>✓ ::selection = texto selecionado</li>
+        </ul>
+    </section>
 
-    <select name="opcoes" id="opcoes">
-        <option value="opcao1">Opção P</option>
-        <option value="opcao2">Opção M</option>
-        <option value="opcao3">Opção G</option>
-    </select>
+    <section>
+        <h2>1) :hover</h2>
+        <div class="caixa-hover">Passe o mouse aqui</div>
+        <p>Exemplo: quando o mouse passa por cima, a caixa muda de cor.</p>
+    </section>
 
-    <input type="email" name="opcao" value="opcao1" id="opcao1" required>
-   
- <label for="opcao1">mail 1</label>
- <input type="text" name="opcao" value="opcao2" id="opcao2" required>
- <input type="text" name="opcao" value="opcao2" id="opcao2" disabled>
+    <section>
+        <h2>2) :active</h2>
+        <a href="#">Clique aqui</a>
+        <p>Exemplo: o link muda de cor quando é clicado.</p>
+    </section>
 
+    <section>
+        <h2>3) :visited</h2>
+        <a href="https://www.google.com" target="_blank">Link visitado</a>
+        <p>Exemplo: links já acessados recebem outro estilo.</p>
+    </section>
 
+    <section>
+        <h2>4) :focus</h2>
+        <input type="text" placeholder="Digite seu nome">
+        <p>Exemplo: o campo fica com fundo amarelo quando recebe foco.</p>
+    </section>
 
+    <section>
+        <h2>5) :first-child e :last-child</h2>
+        <ul class="lista">
+            <li>Primeiro item</li>
+            <li>Segundo item</li>
+            <li class="esse">Terceiro item</li>
+            <li>Quarto item</li>
+            <li>Último item</li>
+        </ul>
+        <p>Exemplo: o primeiro item fica vermelho e o último fica azul.</p>
+    </section>
+
+    <section>
+        <h2>6) :nth-child(odd)</h2>
+        <ul class="lista-ordenada">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+        </ul>
+        <p>Exemplo: os itens ímpares ficam verdes.</p>
+    </section>
+
+    <section>
+        <h2>7) :not(.esse)</h2>
+        <ul>
+            <li class="esse">Este item tem classe especial</li>
+            <li>Outro item</li>
+            <li>Mais um</li>
+        </ul>
+        <p>Exemplo: todos os itens que não têm a classe <strong>.esse</strong> recebem outra cor.</p>
+    </section>
+
+    <section>
+        <h2>8) :checked</h2>
+        <label>
+            <input type="checkbox" checked>
+            Aceito os termos
+        </label>
+        <p>Exemplo: quando o checkbox está marcado, ele recebe um estilo diferente.</p>
+    </section>
+
+    <section>
+        <h2>9) :valid e :invalid</h2>
+        <input type="email" value="teste@dominio.com" required>
+        <input type="email" value="email-invalido" required>
+        <p>Exemplo: email válido fica verde e inválido fica laranja.</p>
+    </section>
+
+    <section>
+        <h2>10) :required</h2>
+        <input type="text" placeholder="Campo obrigatório" required>
+        <p>Exemplo: o campo obrigatório recebe destaque.</p>
+    </section>
+
+    <section>
+        <h2>11) :disabled</h2>
+        <input type="text" value="Campo bloqueado" disabled>
+        <p>Exemplo: campo desabilitado fica cinza.</p>
+    </section>
+
+    <section>
+        <h2>12) :first-letter</h2>
+        <p class="primeira-letra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Exemplo: a primeira letra do parágrafo recebe uma fonte e cor especiais.</p>
+    </section>
+
+    <section>
+        <h2>13) ::first-line</h2>
+        <p class="primeira-linha">Esta é a primeira linha do parágrafo, que recebe um efeito especial em CSS.</p>
+        <p>Exemplo: a primeira linha do texto recebe destaque visual.</p>
+    </section>
+
+    <section>
+        <h2>14) ::selection</h2>
+        <p class="texto-selecionado">Selecione este texto com o mouse para ver a mudança de cor.</p>
+        <p>Exemplo: o texto selecionado recebe um fundo amarelo.</p>
+    </section>
 </body>
-</html> 
+</html>

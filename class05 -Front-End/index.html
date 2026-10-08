@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-classes e Pseudo-elementos</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+    <header class="hero">
+        <p class="tag">CSS</p>
+        <h1>Pseudo-classes e Pseudo-elementos</h1>
+        <p class="subtitle">
+            Entenda como o CSS consegue estilizar elementos em estados especiais ou
+            partes específicas de um conteúdo.
+        </p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>1. Pseudo-classes mais usadas no CSS</h2>
+            <p>
+                As <strong>pseudo-classes</strong> selecionam elementos conforme o estado,
+                posição ou condição. Elas usam um único sinal: <code>:</code>.
+            </p>
+
+            <div class="demo-group">
+                <button class="demo-button">Passe o mouse</button>
+                <input class="demo-input" type="text" placeholder="Clique aqui" />
+            </div>
+
+            <ul class="demo-list">
+                <li>Primeiro item</li>
+                <li>Segundo item</li>
+                <li>Terceiro item</li>
+            </ul>
+
+            <a class="demo-link" href="#">Link de exemplo</a>
+
+            <div class="lista-explicacoes">
+                <div class="item-explicacao">
+                    <h3>:hover</h3>
+                    <p>Quando o mouse passa por cima.</p>
+                    <div class="mini-demo mini-hover">Hover</div>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:active</h3>
+                    <p>Quando o elemento está sendo pressionado.</p>
+                    <button class="mini-demo mini-active">Clique</button>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:focus</h3>
+                    <p>Quando o campo recebe foco.</p>
+                    <input class="mini-demo mini-focus" type="text" value="Foco" />
+                </div>
+                <div class="item-explicacao">
+                    <h3>:focus-visible</h3>
+                    <p>Quando o foco é visível ao teclado.</p>
+                    <input class="mini-demo mini-focus-visible" type="text" value="Teclado" />
+                </div>
+                <div class="item-explicacao">
+                    <h3>:visited</h3>
+                    <p>Para links já acessados.</p>
+                    <a class="mini-demo mini-visited" href="#">Visitado</a>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:link</h3>
+                    <p>Para links ainda não visitados.</p>
+                    <a class="mini-demo mini-link" href="#">Link</a>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:enabled</h3>
+                    <p>Campos ativos e habilitados.</p>
+                    <input class="mini-demo mini-enabled" type="text" value="Ativo" />
+                </div>
+                <div class="item-explicacao">
+                    <h3>:disabled</h3>
+                    <p>Campos desativados.</p>
+                    <input class="mini-demo mini-disabled" type="text" value="Desativado" disabled />
+                </div>
+                <div class="item-explicacao">
+                    <h3>:checked</h3>
+                    <p>Inputs marcados, como checkbox/radio.</p>
+                    <label class="mini-check"><input type="checkbox" checked /> Marcado</label>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:required</h3>
+                    <p>Campos obrigatórios.</p>
+                    <input class="mini-demo mini-required" type="text" value="Obrigatório" required />
+                </div>
+                <div class="item-explicacao">
+                    <h3>:optional</h3>
+                    <p>Campos opcionais.</p>
+                    <input class="mini-demo mini-optional" type="text" value="Opcional" />
+                </div>
+                <div class="item-explicacao">
+                    <h3>:valid</h3>
+                    <p>Valor válido no formulário.</p>
+                    <input class="mini-demo mini-valid" type="email" value="email@teste.com" />
+                </div>
+                <div class="item-explicacao">
+                    <h3>:invalid</h3>
+                    <p>Valor inválido no formulário.</p>
+                    <input class="mini-demo mini-invalid" type="email" value="email-invalido" />
+                </div>
+                <div class="item-explicacao">
+                    <h3>:in-range</h3>
+                    <p>Quando o valor está dentro do intervalo.</p>
+                    <input class="mini-demo mini-range" type="number" min="1" max="10" value="7" />
+                </div>
+                <div class="item-explicacao">
+                    <h3>:out-of-range</h3>
+                    <p>Quando o valor está fora do intervalo.</p>
+                    <input class="mini-demo mini-out-range" type="number" min="1" max="10" value="15" />
+                </div>
+                <div class="item-explicacao">
+                    <h3>:read-only</h3>
+                    <p>Campo somente leitura.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:read-write</h3>
+                    <p>Campo editável.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:placeholder-shown</h3>
+                    <p>Quando o placeholder está visível.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:default</h3>
+                    <p>Elemento padrão em um grupo.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:empty</h3>
+                    <p>Quando o elemento está vazio.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:root</h3>
+                    <p>Elemento raiz da página.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:target</h3>
+                    <p>Quando o link aponta para um alvo da página.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:lang()</h3>
+                    <p>Quando o idioma do texto corresponde ao valor.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:first-child</h3>
+                    <p>Primeiro filho de um pai.</p>
+                    <div class="mini-lista mini-first">
+                        <span>1º</span>
+                        <span>2º</span>
+                        <span>3º</span>
+                    </div>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:last-child</h3>
+                    <p>Último filho do pai.</p>
+                    <div class="mini-lista mini-last">
+                        <span>1º</span>
+                        <span>2º</span>
+                        <span>3º</span>
+                    </div>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:only-child</h3>
+                    <p>Único filho do pai.</p>
+                    <div class="mini-lista mini-only">
+                        <span>Único</span>
+                    </div>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:first-of-type</h3>
+                    <p>Primeiro elemento do seu tipo.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:last-of-type</h3>
+                    <p>Último elemento do seu tipo.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:only-of-type</h3>
+                    <p>Único elemento do tipo.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:nth-child()</h3>
+                    <p>Seleciona pela posição.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:nth-last-child()</h3>
+                    <p>Seleciona pela posição contada do fim.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:nth-of-type()</h3>
+                    <p>Seleciona o n-ésimo do mesmo tipo.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:nth-last-of-type()</h3>
+                    <p>Conta do fim dentro do mesmo tipo.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:not()</h3>
+                    <p>Seleciona tudo menos o que for indicado.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:is()</h3>
+                    <p>Seleciona vários elementos de uma vez.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:where()</h3>
+                    <p>Sem especificidade, semelhante ao :is().</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:has()</h3>
+                    <p>Seleciona o elemento se ele contiver outro.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:fullscreen</h3>
+                    <p>Quando o elemento está em tela cheia.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:defined</h3>
+                    <p>Elementos já definidos no browser.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>:scope</h3>
+                    <p>Refere-se ao escopo atual.</p>
+                </div>
+            </div>
+
+            <pre><code>
+button:hover { background: #ff6b6b; }
+input:focus { border-color: #4ecdc4; }
+a:visited { color: #6c5ce7; }
+li:first-child { color: #ff9f1c; }
+li:nth-child(2) { color: #38bdf8; }
+input:invalid { border-color: #f87171; }
+:root { --cor-principal: #38bdf8; }
+:not(.ativo) { opacity: 0.6; }
+        </code></pre>
+        </section>
+
+        <section class="card">
+            <h2>2. Pseudo-elementos mais usados no CSS</h2>
+            <p>
+                Os <strong>pseudo-elementos</strong> criam ou estilizam partes do conteúdo.
+                Eles usam dois pontos: <code>::</code>.
+            </p>
+
+            <p class="demo-paragraph">
+                Esse parágrafo mostra a primeira letra destacada e uma parte do texto
+                com destaque visual.
+            </p>
+
+            <div class="demo-box">Caixa com conteúdo extra</div>
+
+            <div class="lista-explicacoes">
+                <div class="item-explicacao">
+                    <h3>::before</h3>
+                    <p>Insere conteúdo antes do elemento.</p>
+                    <div class="mini-demo mini-before">Antes</div>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::after</h3>
+                    <p>Insere conteúdo depois do elemento.</p>
+                    <div class="mini-demo mini-after">Depois</div>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::first-letter</h3>
+                    <p>Estiliza a primeira letra do texto.</p>
+                    <p class="mini-text mini-first-letter">Texto de exemplo</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::first-line</h3>
+                    <p>Estiliza a primeira linha do parágrafo.</p>
+                    <p class="mini-text mini-first-line">Primeira linha<br>Segunda linha</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::selection</h3>
+                    <p>Estiliza o texto selecionado pelo usuário.</p>
+                    <p class="mini-text mini-selection">Selecione este texto</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::placeholder</h3>
+                    <p>Estiliza o texto do placeholder do input.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::marker</h3>
+                    <p>Estiliza marcadores de listas.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::file-selector-button</h3>
+                    <p>Estiliza o botão de upload de arquivos.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::backdrop</h3>
+                    <p>Estiliza o fundo de elementos modal/fullscreen.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::cue</h3>
+                    <p>Estiliza legendas de mídia (vídeos).</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::cue-region</h3>
+                    <p>Estiliza a região das legendas em vídeos.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::slotted()</h3>
+                    <p>Estiliza conteúdo distribuído em shadow DOM.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::part()</h3>
+                    <p>Estiliza partes expostas de um componente.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::grammar-error</h3>
+                    <p>Estiliza erros de gramática.</p>
+                </div>
+                <div class="item-explicacao">
+                    <h3>::spelling-error</h3>
+                    <p>Estiliza erros de ortografia.</p>
+                </div>
+            </div>
+
+            <pre><code>
+.card::before { content: "★ "; }
+.card::after { content: " ✦"; }
+.paragrafo::first-letter { font-size: 2rem; }
+.p::first-line { color: #fbbf24; }
+::selection { background: #ffd166; }
+input::placeholder { color: #cbd5e1; }
+li::marker { color: #fbbf24; }
+        </code></pre>
+        </section>
+
+        <section class="card">
+            <h2>3. Exemplo prático com uma div</h2>
+            <p>
+                A pseudo-classe <code>:hover</code> muda o estado da div quando o mouse
+                passa por cima. Já os pseudo-elementos <code>::before</code> e
+                <code>::after</code> criam conteúdo visual antes e depois do texto sem
+                mudar o HTML.
+            </p>
+
+            <div class="box-pratica">Exemplo com div</div>
+
+            <p class="box-explicacao">
+                Aqui o CSS usa :hover para trocar a cor e ::before e ::after para
+                inserir elementos visuais sem alterar a estrutura do documento.
+            </p>
+
+            <pre><code>
+.box-pratica:hover {
+  background: #f97316;
+  color: white;
+}
+
+.box-pratica::before {
+  content: "→ ";
+}
+
+.box-pratica::after {
+  content: " ←";
+}
+        </code></pre>
+        </section>
+
+        <section class="card">
+            <h2>4. Diferença principal</h2>
+            <div class="comparison">
+                <div>
+                    <h3>Pseudo-classes</h3>
+                    <ul>
+                        <li>Selecionam elementos por estado, posição ou condição.</li>
+                        <li>Ex: :hover, :focus, :checked, :nth-child()</li>
+                        <li>Usam 1 ponto.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Pseudo-elementos</h3>
+                    <ul>
+                        <li>Selecionam partes do conteúdo ou criam elementos virtuais.</li>
+                        <li>Ex: ::before, ::after, ::first-letter, ::selection</li>
+                        <li>Usam 2 pontos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="card summary">
+            <h2>5. Resumo final</h2>
+            <p>
+                As pseudo-classes e pseudo-elementos são recursos muito importantes do CSS.
+                As primeiras reagem ao estado do elemento e as segundas estilizam partes
+                do conteúdo ou criam elementos visuais sem mexer no HTML.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

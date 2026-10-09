@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background: #f3f3f3;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.exemplo {
+  margin-bottom: 30px;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* TRANSITION */
+.transition-box {
+  background-color: #f4b400;
+  transition: all 1s ease-in-out;
+}
+
+.transition-box:hover {
+  width: 180px;
+  height: 180px;
+  background-color: #0097a7;
+  transform: translateX(20px);
+}
+
+/* TRANSFORM */
+.transform-box {
+  background-color: #4caf50;
+  transition: transform 0.6s ease;
+}
+
+.transform-box:hover {
+  transform: translate(30px, -10px) rotate(20deg) scale(1.2);
+}
+
+/* ANIMATION */
+.animation-box {
+  background-color: #e53935;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+.linha {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mini-box {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #673ab7;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.6s ease;
+}
+
+.translate-box:hover {
+  transform: translateX(20px);
+}
+
+.rotate-box:hover {
+  transform: rotate(45deg);
+}
+
+.scale-box:hover {
+  transform: scale(1.3);
+}
+
+.skew-box:hover {
+  transform: skewY(20deg);
+}
+
+.bounce-box {
+  background-color: #00acc1;
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.transition-color-box:hover {
+  background-color: #ff5722;
+}
+
+.transition-width-box:hover {
+  width: 130px;
+}
+
+.transition-opacity-box:hover {
+  opacity: 0.4;
+}
+
+.matrix-box:hover {
+  transform: matrix(1.2, 0, 0.2, 1.1, 20, 10);
+}
+
+.scaleX-box:hover {
+  transform: scaleX(1.6);
+}
+
+.translateY-box:hover {
+  transform: translateY(-20px);
+}
+
+.perspective-box:hover {
+  transform: perspective(200px) rotateY(30deg);
+}
+
+.spin-box {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-box {
+  animation: fade 1.5s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.flip-box {
+  animation: flip 2s ease-in-out infinite;
+}
+
+@keyframes flip {
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+}

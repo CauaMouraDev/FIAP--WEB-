@@ -45,3 +45,4 @@ while (newData !== 'Sair') {
 
     newData = prompt("Insira um nome ou digite 'Sair' para encerrar:");
 }
+

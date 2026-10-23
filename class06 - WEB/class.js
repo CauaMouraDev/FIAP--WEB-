@@ -40,6 +40,7 @@ class Banco { //Exemplo de criação de classe
 }
 
 const conta = new Banco();
+conta = parseInt(prompt("Digite seu valor :"))
 conta.depositar(2000);
 conta.pagarConta(500, "pix");
 conta.investir(1000, 2, 12);
